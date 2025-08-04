@@ -106,8 +106,8 @@ const Login= () => {
   return (
   
 
-    <div className="container">
-<div className ="container-fluid pt-3 p-1 my-3  bg-success text-white">
+    <div className="container-fluid pt-3 p-1 my-3">
+<div className ="container-fluid pt-3 p-1 my-3 bg-success text-white">
 
 <h1 style={{ textAlign: "center", fontFamily: "redressed georgia garamond serif" }}>eRTO System</h1>
 <p style={{ textAlign: "center", fontFamily: "redressed georgia garamond serif" }}>Welcome to the eRTO System.The place where transparency is the main moto.</p>
@@ -143,7 +143,7 @@ const Login= () => {
   
   <div className="col">
 
-  <div className="card bg-light" style={{width:"500px",height:"400px"}}>
+  <div className="card bg-light" style={{width:"650px",height:"450px"}}>
   
  
     <div className="card-header text-body" style={{ textAlign: "center", fontFamily: "redressed georgia garamond serif" }}><h4>Login</h4></div>
@@ -178,6 +178,11 @@ const Login= () => {
 	
 	<div class="col"></div>
 </div>
+<div className="container-fluid  pt-4 p-4 my-1 bg-dark text-white  ">
+		<p
+			style={{ textAlign: "center", fontFamily: "redressed georgia garamond serif" }}>©Copyright-2025
+			eRTO System</p>
+	</div>
 </div>
   )
 }

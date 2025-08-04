@@ -217,9 +217,9 @@ image!=''?
 
 <hr />
 
-	<div className="container-fluid  pt-1 p-1 my-1 bg-dark text-white  ">
+	<div className="container-fluid  pt-4 p-4 my-1 bg-dark text-white  ">
 		<p
-			style={{ textAlign: "center", fontFamily: "redressed georgia garamond serif" }}>©Copyright-2022
+			style={{ textAlign: "center", fontFamily: "redressed georgia garamond serif" }}>©Copyright-2025
 			eRTO System</p>
 	</div>
 </div>

@@ -832,64 +832,88 @@ const Front = () => {
 <div   className="row">
 
 
-{/* <table style={{alignContent:"center"}}>
-	<tr>
-		<td><div className="col" style={{maxWidth:"50%"}}>
-		<div className="flip-card">
-			<div className="flip-card-inner">
-				<div className="flip-card-front">
-					<img src={leader}
-						alt="Avatar" style={{width:'200px' , height:"250px"}}/>
-				</div>
-				<div className="flip-card-back"><br/>
-				<h1>Vaishali Patil</h1><br/>
-							<p>Project developer</p>
-							<p>IACSD</p>
-					
-				</div>
-			</div>
-		</div>
-	</div></td>
-		<td><div className="col" style={{maxWidth:"50%"}}>
-		<div className="flip-card">
-			<div className="flip-card-outer">
-				<div className="flip-card-front">
-					<img src={shruti}
-						alt="Avatar" style={{width:'200px' , height:"250px"}}/>
-				</div>
-				<div className="flip-card-back"><br/>
-				<h1>Shruti Kabmle</h1><br/>
-							<p>Project Developer</p>
-							<p>IACSD</p>
-					
-				</div>
-			</div>
-		</div>
-		
-</div></td>
-	</tr>
-</table> */}
-<div style={{width: '80%', display: 'table'}}>
-        <div style={{display: 'table-row', height: '70px'}}>
-          {/* <div style={{width: '20%', display: 'table-cell'}} align="right">
-		  <div className="flip-card">
-			<div className="flip-card-inner">
-				
-				<div className="flip-card-back"><br/>
-				<h1>Vaishali Patil</h1><br/>
-							<p>Project developer</p>
-							<p>IACSD</p>
-					
-				</div>
-			</div>
-		</div>
-          </div> */}
+
+<div style={{ width: '100%', display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
+
+{/* <div style={{ width: '100%', display: 'table' }}> */}
+  <div style={{ display: 'table-row', height: '300px' }}>
+    
+    <div style={{ display: 'table-cell', paddingLeft: "100px" }}>
+      <div className="flip-card">
+        <div className="flip-card-inner">
+          <div className="flip-card-back"><br />
+            <h1>Aditi &nbsp;Thosar</h1><br />
+            <p>Project Developer</p>
+            <p>Sunbeam</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style={{ display: 'table-cell', paddingLeft: "100px" }}>
+      <div className="flip-card">
+        <div className="flip-card-inner">
+          <div className="flip-card-back"><br />
+            <h1>Rutuja &nbsp;Manglekar</h1><br />
+            <p>Project Developer</p>
+            <p>Sunbeam</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* 
+    <div style={{ display: 'table-cell', paddingLeft: "10px" }}>
+      <div className="flip-card">
+        <div className="flip-card-inner">
+          <div className="flip-card-back"><br />
+            <h1>Pooja &nbsp;Jaiswal</h1><br />
+            <p>Project Guide</p>
+            <p>Sunbeam</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    */}
+
+    <div style={{ display: 'table-cell', paddingLeft: "100px" }}>
+      <div className="flip-card">
+        <div className="flip-card-inner">
+          <div className="flip-card-back"><br />
+            <h1>Prathmesh &nbsp;Naraje</h1><br />
+            <p>Project Developer</p>
+            <p>Sunbeam</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style={{ display: 'table-cell', paddingLeft: "100px" }}>
+      <div className="flip-card">
+        <div className="flip-card-inner">
+          <div className="flip-card-back"><br />
+            <h1>Ganesh &nbsp;Patil</h1><br />
+            <p>Project Developer</p>
+            <p>Sunbeam</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+{/* <div style={{width: '30%', display: 'table'}}>
+        <div style={{display: 'table-row', height: '50px'}}>
+          
 
 
 
           <div style={{display: 'table-cell',paddingLeft:"220px"}}> 
-		  <div className="flip-card">
-			<div className="flip-card-inner">
+		  <div className="card">
+			<div className="flip-card-content">
 				
 				<div className="flip-card-back"><br/>
 				<h1>Aditi  &nbsp;Thosar</h1><br/>
@@ -916,7 +940,21 @@ const Front = () => {
 		</div>
           </div>
 
+		   {/* <div style={{display: 'table-cell',paddingLeft:"10px"}}> 
+		  <div className="flip-card">
+			<div className="flip-card-inner">
+				
+				<div className="flip-card-back"><br/>
+				<h1>Pooja  &nbsp;Jaiswal</h1><br/>
+							<p>Project Guide</p>
+							<p>Sunbeam</p>
+					
+				</div>
+			</div>
+		</div>
+          </div> */}
 
+{/* 
 		  <div style={{display: 'table-cell',paddingLeft:"10px"}}> 
 		  <div className="flip-card">
 			<div className="flip-card-inner">
@@ -961,13 +999,37 @@ const Front = () => {
 
 
 </div>
-<br/><br/>
+<br/><br/> */}
+
+{/* <div align="center" id="aboutus"><br/>
+		
+		<h1 className="text-dark" style={{fontFamily:"Lucida Handwriting"}}>Our Project Guide</h1>
+	</div>
+	<br/>
+
+	<div style={{display: 'table-cell',paddingLeft:"525px"}}> 
+		  <div className="flip-card">
+			<div className="flip-card-inner">
+				
+				<div className="flip-card-back"><br/>
+				<h1>Pooja   &nbsp;Jaiswal</h1><br/>
+							<p>Project Guide</p>
+							<p>Sunbeam </p>
+					
+				</div>
+			</div>
+		</div>
+          </div>
+		  <br></br> */}
+      
+
+</div>
+</div>
 
 
 
-
-	<div className="container" id="contactus">
-		<div className="row">
+	<div className="container-fluid pt-3 p-1 my-3" id="contactus"  >
+		<div className="row"  >
 			<div className="col"></div>
 
 			<div className="col">

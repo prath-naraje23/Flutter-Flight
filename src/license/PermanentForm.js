@@ -261,7 +261,7 @@ const PermanentForm =()=>{
 
 		<div className="col">
         
-			<div className="card bg-light " style={{width:"600px",height:"1265px"}} >
+			<div className="card bg-light " style={{width:"700px",height:"1265px"}} >
 				<div className="card-header" style={{textAlign:"center"}}>
 					<h5>Apply For Permanent License</h5>
 				</div>
@@ -481,9 +481,9 @@ const PermanentForm =()=>{
 	</div>
 	<hr />
 
-	<div className="container-fluid  pt-1 p-1 my-1 bg-dark text-white  ">
+	<div className="container-fluid  pt-4 p-4 my-1 bg-dark text-white  ">
 		<p
-			style={{ textAlign: "center", fontFamily: "redressed georgia garamond serif" }}>©Copyright-2021
+			style={{ textAlign: "center", fontFamily: "redressed georgia garamond serif" }}>©Copyright-2025
 			eRTO System</p>
 	</div>
 

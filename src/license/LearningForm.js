@@ -589,3 +589,180 @@ const LearningForm =()=>{
 }
 
 export default LearningForm
+
+// import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
+// import { useHistory, Link } from 'react-router-dom';
+// import { useSelector } from 'react-redux';
+// import { toast, ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+// import { url } from '../component/common/constants';
+// import './learningForm.css';
+
+// const LearningForm = () => {
+//   const isSignin = useSelector((state) => state.isSignin);
+//   const history = useHistory();
+//   const [image, setImage] = useState(undefined);
+//   const [flag, setFlag] = useState(0);
+
+//   const [formData, setFormData] = useState({
+//     firstName: '',
+//     lastName: '',
+//     aadharNo: '',
+//     mobileNo: '',
+//     dob: '',
+//     gender: '',
+//     bloodGroup: '',
+//     identificationMark: '',
+//     state: '',
+//     district: '',
+//     village: '',
+//     landmark: '',
+//     pincode: '',
+//     street: '',
+//     appointmentDate: '',
+//     appointmentTime: ''
+//   });
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormData({ ...formData, [name]: value });
+//   };
+
+//   const maxdate = new Date();
+//   maxdate.setFullYear(maxdate.getFullYear() - 18);
+//   const formattedMaxDate = maxdate.toISOString().split('T')[0];
+
+//   const mindate = new Date();
+//   mindate.setMonth(mindate.getMonth() + 1);
+//   const formattedMinDate = mindate.toISOString().split('T')[0];
+
+//   useEffect(() => {
+//     if (!isSignin.status) {
+//       alert('Please sign in first!');
+//       history.push('/user/login');
+//     } else {
+//       verify();
+//     }
+//   }, []);
+
+//   const verify = () => {
+//     axios.get(`${url}/license/lverify/${isSignin.user.userId}`).then((response) => {
+//       const res = response.data;
+//       if (res === 'User Already Registered for Learning') {
+//         toast.info(res, { position: toast.POSITION.TOP_RIGHT, autoClose: false });
+//         history.push('/user/status');
+//       }
+//     });
+//   };
+
+//   const SaveImage = () => {
+//     const email = isSignin.user.email;
+//     const data = new FormData();
+//     data.append('profile', image);
+//     data.append('email', email);
+
+//     axios.post(`${url}/user/addimage`, data).then((response) => {
+//       const res = response.data;
+//       if (res.status === 'OK' && res.message === 'Success') {
+//         toast.info('Image Uploaded Successfully', { position: toast.POSITION.TOP_RIGHT, autoClose: false });
+//         setFlag(1);
+//       } else {
+//         toast.info(res.message, { position: toast.POSITION.TOP_RIGHT, autoClose: false });
+//       }
+//     });
+//   };
+
+//   const onFileSelect = (event) => {
+//     setImage(event.target.files[0]);
+//   };
+
+//   const license = () => {
+//     const data = {
+//       ...formData,
+//       email: isSignin.user.email
+//     };
+
+//     axios.post(`${url}/license/learning`, data).then((response) => {
+//       const result = response.data;
+//       if (result === 'Registered Successfully!!') {
+//         toast.info('Registered Successfully for learning license', { position: toast.POSITION.TOP_RIGHT, autoClose: 8000 });
+//         history.push('/user/status');
+//       } else {
+//         toast.info(response.error, { position: toast.POSITION.TOP_RIGHT, autoClose: false });
+//       }
+//     });
+//   };
+
+//   return (
+//     <div className="form-container">
+//       <ToastContainer />
+//       <h2>Learning License Application</h2>
+
+//       <div className="form-section">
+//         <label htmlFor="firstName">First Name</label>
+//         <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
+
+//         <label htmlFor="lastName">Last Name</label>
+//         <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
+
+//         <label htmlFor="aadharNo">Aadhar Number</label>
+//         <input type="text" name="aadharNo" value={formData.aadharNo} onChange={handleChange} maxLength={12} required />
+
+//         <label htmlFor="mobileNo">Mobile Number</label>
+//         <input type="text" name="mobileNo" value={formData.mobileNo} onChange={handleChange} maxLength={10} required />
+
+//         <label htmlFor="dob">Date of Birth</label>
+//         <input type="date" name="dob" value={formData.dob} onChange={handleChange} max={formattedMaxDate} required />
+
+//         <label htmlFor="gender">Gender</label>
+//         <select name="gender" value={formData.gender} onChange={handleChange} required>
+//           <option value="">Select</option>
+//           <option value="Male">Male</option>
+//           <option value="Female">Female</option>
+//           <option value="Other">Other</option>
+//         </select>
+
+//         <label htmlFor="bloodGroup">Blood Group</label>
+//         <input type="text" name="bloodGroup" value={formData.bloodGroup} onChange={handleChange} required />
+
+//         <label htmlFor="identificationMark">Identification Mark</label>
+//         <input type="text" name="identificationMark" value={formData.identificationMark} onChange={handleChange} required />
+
+//         <label htmlFor="state">State</label>
+//         <input type="text" name="state" value={formData.state} onChange={handleChange} required />
+
+//         <label htmlFor="district">District</label>
+//         <input type="text" name="district" value={formData.district} onChange={handleChange} required />
+
+//         <label htmlFor="village">Village</label>
+//         <input type="text" name="village" value={formData.village} onChange={handleChange} />
+
+//         <label htmlFor="landmark">Landmark</label>
+//         <input type="text" name="landmark" value={formData.landmark} onChange={handleChange} />
+
+//         <label htmlFor="pincode">Pincode</label>
+//         <input type="text" name="pincode" value={formData.pincode} onChange={handleChange} required />
+
+//         <label htmlFor="street">Street</label>
+//         <input type="text" name="street" value={formData.street} onChange={handleChange} />
+
+//         <label htmlFor="appointmentDate">Appointment Date</label>
+//         <input type="date" name="appointmentDate" value={formData.appointmentDate} onChange={handleChange} min={formattedMinDate} required />
+
+//         <label htmlFor="appointmentTime">Appointment Time</label>
+//         <input type="time" name="appointmentTime" value={formData.appointmentTime} onChange={handleChange} required />
+//       </div>
+
+//       <div className="form-section">
+//         <label htmlFor="profile">Upload Photo</label>
+//         <input type="file" name="profile" onChange={onFileSelect} />
+//         <button type="button" onClick={SaveImage}>Upload Image</button>
+//       </div>
+
+//       <button type="button" onClick={license} disabled={!flag}>Submit</button>
+//     </div>
+//   );
+// };
+
+// export default LearningForm;

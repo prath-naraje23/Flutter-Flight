@@ -106,7 +106,7 @@ const ForgotPassword= () => {
           
           <div className="col">
         
-          <div className="card bg-light" style={{width:"500px",height:"300px"}}>
+          <div className="card bg-light" style={{width:"550px",height:"330px"}}>
           
          
             <div className="card-header text-body" style={{ textAlign: "center", fontFamily: "redressed georgia garamond serif" }}><h4>Forgot Password</h4></div>
@@ -136,7 +136,7 @@ const ForgotPassword= () => {
             
             <div className="col"></div>
         </div>
-        <div className="container-fluid  pt-1 p-1 my-1 bg-dark text-white  ">
+        <div className="container-fluid  pt-4 p-4 my-1 bg-dark text-white  ">
 		<p
 			style={{ textAlign: "center", fontFamily: "redressed georgia garamond serif" }}>©Copyright-2025
 			eRTO System</p>

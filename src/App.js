@@ -34,7 +34,9 @@ function App() {
        <Route path='/user/login' exact component={Login} />
        <Route path='/user/register' exact component={Register} />
        <Route path='/user/home' exact component={HomePage} />
-       <Route path="/license/learning" exact component={LearningForm} />
+       {/* <Route path="/license/learning" exact component={LearningForm} /> */}
+       <Route path="/license/learning-form" component={LearningForm} />
+
        <Route path="/license/permanent" exact component={PermanentForm} />
        <Route path="/user/mocktest" exact component={Mocktest} />
        <Route path="/user/status" exact component={Status} />

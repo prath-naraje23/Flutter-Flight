@@ -67,7 +67,7 @@ const [lastName, setLastName] = useState('')
 
 
     return (
-        <div className="container" >
+        <div className="container-fluid pt-3 p-1 my-3" >
             <div className="container-fluid pt-3 p-1 my-3  bg-success text-white" id="container">
                 <h1
                     style={{ textAlign: "center", fontFamily: "redressed georgia garamond serif" }}>eRTO
@@ -113,7 +113,7 @@ const [lastName, setLastName] = useState('')
 
                 <div className="col">
 
-                    <div className="card " style={{width:"600px",height:"550px"}}>
+                    <div className="card " style={{width:"800px",height:"550px"}}>
 
 
                         <div className="card-header text-body" style={{ textAlign: "center", fontFamily: "redressed georgia garamond serif" }}><h5>Register/SignUp</h5></div>
@@ -173,7 +173,11 @@ const [lastName, setLastName] = useState('')
             </div>
 
 
-
+<div className="container-fluid  pt-4 p-4 my-1 bg-dark text-white  ">
+		<p
+			style={{ textAlign: "center", fontFamily: "redressed georgia garamond serif" }}>©Copyright-2025
+			eRTO System</p>
+	</div>
         </div>
 
 
