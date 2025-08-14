@@ -880,7 +880,7 @@ const Front = () => {
       <div className="flip-card">
         <div className="flip-card-inner">
           <div className="flip-card-back"><br />
-            <h1>Prathmesh &nbsp;Naraje</h1><br />
+            <h1>Prathamesh &nbsp;Naraje</h1><br />
             <p>Project Developer</p>
             <p>Sunbeam</p>
           </div>
